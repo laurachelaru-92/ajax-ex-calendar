@@ -30,7 +30,9 @@
     <!-- / contenitore -->
     <!-- Template Handlebars -->
     <script id="day-template" type="text/x-handlebars-template">
-      <li class="single-day" data-thisdate="{{data-template}}">{{day}} {{month}} - {{holiday}}</li>
+      <li class="single-day" data-thisdate="{{data-template}}">
+        {{day}} {{month}} <span class="holiday"></span>
+      </li>
     </script>
     <!-- / template handlebars -->
     <script src="js/script.js" charset="utf-8"></script>

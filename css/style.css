@@ -7,3 +7,8 @@ padding: 0;
 #mese {
   text-transform: capitalize;
 }
+
+.red {
+  color: red;
+  font-weight: bold;
+}
