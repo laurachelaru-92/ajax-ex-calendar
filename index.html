@@ -2,11 +2,12 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <script src="https://momentjs.com/downloads/moment.min.js" charset="utf-8"></script>
-    <script src="https://momentjs.com/downloads/moment-with-locales.js" charset="utf-8"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
     <link rel="stylesheet" href="css/style.css" type="text/css">
+    <script src="https://momentjs.com/downloads/moment.min.js" charset="utf-8"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.min.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
     <title>Ajax Calendar</title>
   </head>
   <body>
@@ -14,8 +15,8 @@
     <div id="wrapper">
       <!-- Mese e frecce -->
       <header>
-        <h1 id="mese">Gennaio</h1>
-        <h2 id="anno">2018</h2>
+        <h1 id="mese"></h1>
+        <h2 id="anno"></h2>
         <i class="fas fa-chevron-left"></i>
         <i class="fas fa-chevron-right"></i>
       </header>
@@ -29,7 +30,7 @@
     <!-- / contenitore -->
     <!-- Template Handlebars -->
     <script id="day-template" type="text/x-handlebars-template">
-      <li class="day"></li>
+      <li class="single-day" data-thisdate="{{data-template}}">{{day}} {{month}} - {{holiday}}</li>
     </script>
     <!-- / template handlebars -->
     <script src="js/script.js" charset="utf-8"></script>
