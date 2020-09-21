@@ -8,6 +8,32 @@ moment.locale('it');
 $("select#month-select").val("01");
 var valoreSelect = $("select#month-select").val();
 
+// Creiamo un evento al click su "next" che aumenta il valore di mese nella select
+$(".fa-chevron-right").click(function(){
+  if(valoreSelect != "12") {
+    valoreSelect = 1 + parseInt(valoreSelect);
+    if(valoreSelect < 10) {
+      valoreSelect = "0" + valoreSelect;
+    }
+  }
+  $("select#month-select").val(valoreSelect);
+  $("ul#days").empty();
+  stampaMese(valoreSelect);
+});
+
+// Creiamo un evento al click su "prev" che diminuisce il valore di mese nella select
+$(".fa-chevron-left").click(function(){
+  if(valoreSelect != "01") {
+    valoreSelect = parseInt(valoreSelect) - 1;
+    if(valoreSelect < 10) {
+      valoreSelect = "0" + valoreSelect;
+    }
+  }
+  $("select#month-select").val(valoreSelect);
+  $("ul#days").empty();
+  stampaMese(valoreSelect);
+});
+
 // In mase al change del valore della select, visualizziamo il mese scelto nelle options
 $("select#month-select").change(function(){
   valoreSelect = $(this).val();
@@ -15,6 +41,7 @@ $("select#month-select").change(function(){
   stampaMese(valoreSelect);
 });
 
+// Stampiamo il mese in base al valore di select cliccato
 stampaMese(valoreSelect);
 
 // FUNZIONE di visualizzazzione mese
@@ -90,7 +117,6 @@ $("#days .single-day").each(function(){
 
 
 }
-
 
 
 
