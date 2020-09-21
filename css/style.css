@@ -4,11 +4,96 @@ margin: 0;
 padding: 0;
 }
 
-#mese {
-  text-transform: capitalize;
+/* Generiche */
+body {
+  width: 100%;
+  background-image: url(../img/bg.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: 'Roboto', sans-serif;
+}
+
+#wrapper {
+  width: 30%;
+  margin: auto;
+  background-color: pink;
+  text-align: center;
 }
 
 .red {
   color: red;
   font-weight: bold;
+}
+
+.blue {
+  color: blue;
+}
+
+.underline {
+  text-decoration: underline;
+}
+/* fine generiche */
+
+header,
+main {
+  padding: 20px;
+}
+
+#header-content {
+  width: 70%;
+  margin: auto;
+  position: relative;
+}
+
+#header-content i {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+#header-content i.fa-chevron-left {
+  right: 100%;
+}
+
+#header-content i.fa-chevron-right {
+  left: 100%;
+}
+
+#mese {
+  text-transform: capitalize;
+}
+
+ul#days {
+  list-style: none;
+  text-align: left;
+  width: 70%;
+  margin: auto;
+  padding-left: 30px;
+}
+
+li.single-day {
+  padding: 5px 0;
+}
+
+@media screen and (max-width: 1070px) {
+
+  #wrapper {
+    width: 60%;
+  }
+
+  ul#days {
+    width: 70%;
+    margin: auto;
+  }
+
+  h1#mese {
+    font-size: 30px;
+  }
+
+  h3#anno {
+    font-size: 20px;
+  }
+
 }

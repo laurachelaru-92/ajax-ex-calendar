@@ -8,6 +8,7 @@
     <script src="https://momentjs.com/downloads/moment-with-locales.min.js" charset="utf-8"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.7.6/handlebars.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <title>Ajax Calendar</title>
   </head>
   <body>
@@ -15,10 +16,28 @@
     <div id="wrapper">
       <!-- Mese e frecce -->
       <header>
-        <h1 id="mese"></h1>
-        <h2 id="anno"></h2>
-        <i class="fas fa-chevron-left"></i>
-        <i class="fas fa-chevron-right"></i>
+        <div id="header-content">
+          <i class="fas fa-chevron-left"></i>
+          <h1 id="mese"></h1>
+          <h3 id="anno"></h3>
+          <i class="fas fa-chevron-right"></i>
+        </div>
+        <div>
+          <select id="month-select">
+            <option value="01">Gennaio</option>
+            <option value="02">Febbraio</option>
+            <option value="03">Marzo</option>
+            <option value="04">Aprile</option>
+            <option value="05">Maggio</option>
+            <option value="06">Giugno</option>
+            <option value="07">Luglio</option>
+            <option value="08">Agosto</option>
+            <option value="09">Settembre</option>
+            <option value="10">Ottobre</option>
+            <option value="11">Novembre</option>
+            <option value="12">Dicembre</option>
+          </select>
+        </div>
       </header>
       <!-- / mese e frecce -->
       <!-- Giorni -->
